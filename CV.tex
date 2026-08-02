@@ -115,16 +115,25 @@
 % --- 第一个项目 ---
 % 将标题行末尾的 \\ 替换为 \titlebreak 命令
 
-\textbf{复杂统计模型假设检验的 MLQMC 功效评估框架} \hfill 2025.09 -- 2026.02 \titlebreak
-项目描述：针对工业智能化（如半导体缺陷检测与金融风险预测）中高维复杂模型假设检验的难题，本项目旨在突破“统计功效失真”与“计算效率低下”的权衡瓶颈，提出了一种集高精度、高效率与强稳定性于一体的通用推断框架，相关成果发表于 \textbf{Expert Systems with Applications}（第一作者）。
+\textbf{复杂统计模型假设检验的多层准蒙特卡洛（MLQMC）框架功效评估} \hfill 2025.09 -- 2026.02 \titlebreak
+项目描述：针对工业智能化中高维复杂模型假设检验的难题，项目旨在突破统计功效失真与计算效率低下的权衡瓶颈，提出了一种集高精度、高效率与强稳定性于一体的通用推断框架，相关成果发表于\quad \textbf{Expert Systems with Applications}（第一作者）。
 % 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{理论与算法创新}：提出融合 \textbf{随机化 Sobol 序列}、\textbf{分层敏感性分配} 与 \textbf{Logistic 平滑} 的多层准蒙特卡洛（MLQMC）评估框架，解决了序贯蒙特卡洛（SMC）在 $O(10^3)$ 高维参数空间中的粒子退化与方差失控问题。
-    \item \textbf{工程与性能优化}：成功抑制了小样本与非高斯噪声条件下的\textbf{显著性水平偏移（虚警率）}；结合拟蒙特卡洛的高维均匀性，大幅缩减了尾部概率（极低 $\alpha$ 值）估算所需的采样量与计算耗时。
-    \item \textbf{核心产出与应用}：验证了框架在半导体缺陷检测（第一类错误率 $< 0.1\%$）及金融风险监控中的实用性，实现了\textbf{高维统计推断、方差缩减、平滑函数建模到工业级实时响应}的全链路验证。
+    \item \textbf{理论与算法创新}：提出融合 \textbf{随机化 Sobol 序列}、\textbf{分层敏感性分配} 与 \textbf{Logistic 平滑} 的多层准蒙特卡洛评估框架，解决了序贯蒙特卡洛（SMC）在 $O(10^3)$ 高维参数空间中的粒子退化与方差失控问题。
+    \item \textbf{工程与性能优化}：成功抑制了小样本与非高斯噪声条件下的显著性水平偏移（FPR）；结合拟蒙特卡洛的高维均匀性，大幅缩减了尾部概率（极低 $\alpha$ 值）估算所需的采样量与计算耗时。
+    \item \textbf{核心产出与应用}：验证了框架在半导体缺陷检测（第一类错误率 $< 0.1\%$）及金融风险监控中的实用性，实现了高维统计推断、方差缩减、平滑函数建模到工业级实时响应的验证。
 \end{itemize}
 
 % 使用 \projectsep 命令来分隔两个项目
+\projectsep
+
+\textbf{基于 JPL 历表与月球借力的绕日返回轨道设计与优化}（《数学软件》课程期末项目） \hfill 2026.06 -- 2026.07 \titlebreak
+项目描述：基于钱学森《星际航行概论》拼接圆锥曲线理论，扩展并构建了结合月球引力弹弓效应（Swing-by）与 JPL Horizons 真实历表数据的工程级行星际轨道优化与四体（太阳-地球-月球-探测器）数值动力学仿真系统。
+\begin{itemize}[nosep, topsep=\intraProjectListTopSep]
+    \item \textbf{动力学建模与数值积分}：基于 \textbf{Python/SciPy} 实现了 Sun-Earth-Moon-Rocket 四体受力模型[cite: 3]，采用 \textbf{Velocity-Verlet 辛积分器} 解决了高维非线性轨道演化的能量漂移问题，实现一年期演化能量相对漂移 $<10^{-6}$[cite: 3]。
+    \item \textbf{发射窗口优化与借力解析}：构建了月球作用域（SOI）内的双曲线偏折坐标变换算法[cite: 3]；设计内外层双重网格扫描与优化算法，在 2026 年 365 天窗口内成功搜索出最小总速度增量 $\Delta v_{\text{total}}$ 的最优发射日期与轨道参数[cite: 3]。
+    \item \textbf{工程对接与可重现性}：接入 \textbf{JPL Horizons API} 获取真实天体状态向量[cite: 3]，完成数值轨道的真实历表残差校验（位置残差 $\le 6000\text{ km}$）[cite: 3]；编写 \textbf{Makefile} 实现了涵盖数据抓取、仿真计算、分析绘图到轨道动画渲染的全自动流水线[cite: 3]。
+\end{itemize}
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
 \begin{itemize}[nosep]
