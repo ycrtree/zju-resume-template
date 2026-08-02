@@ -90,14 +90,14 @@
 \pagenumbering{gobble}
 
 %%%% 利用tikz来定位照片
-\begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
-  \end{tikzpicture}%
+%\begin{tikzpicture}[remember picture, overlay] 
+ %   \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
+  %\end{tikzpicture}%
   %%%% 利用tikz来定位学校Logo，这里只在第一页显示
   \begin{tikzpicture}[remember picture, overlay] 
     \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
   \end{tikzpicture}%
-\centerline{\LARGE\bfseries{XXX}} 
+\centerline{\LARGE\bfseries{叶储睿}} 
 
 \centerline{\normalsize{\faPhone\ 187-5821-8369 \quad \faEnvelopeO\ \href{mailto:3230100000@zju.edu.cn}{3240102877@zju.edu.cn}}} 
 
