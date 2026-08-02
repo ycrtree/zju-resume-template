@@ -130,9 +130,9 @@
 \textbf{基于 JPL 历表与月球借力的绕日返回轨道设计与优化}（《数学软件》课程期末项目） \hfill 2026.06 -- 2026.07 \titlebreak
 项目描述：基于钱学森《星际航行概论》拼接圆锥曲线理论，扩展并构建了结合月球引力弹弓效应（Swing-by）与 JPL Horizons 真实历表数据的工程级行星际轨道优化与四体（太阳-地球-月球-探测器）数值动力学仿真系统。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{动力学建模与数值积分}：基于 \textbf{Python/SciPy} 实现了 Sun-Earth-Moon-Rocket 四体受力模型[cite: 3]，采用 \textbf{Velocity-Verlet 辛积分器} 解决了高维非线性轨道演化的能量漂移问题，实现一年期演化能量相对漂移 $<10^{-6}$[cite: 3]。
-    \item \textbf{发射窗口优化与借力解析}：构建了月球作用域（SOI）内的双曲线偏折坐标变换算法[cite: 3]；设计内外层双重网格扫描与优化算法，在 2026 年 365 天窗口内成功搜索出最小总速度增量 $\Delta v_{\text{total}}$ 的最优发射日期与轨道参数[cite: 3]。
-    \item \textbf{工程对接与可重现性}：接入 \textbf{JPL Horizons API} 获取真实天体状态向量[cite: 3]，完成数值轨道的真实历表残差校验（位置残差 $\le 6000\text{ km}$）[cite: 3]；编写 \textbf{Makefile} 实现了涵盖数据抓取、仿真计算、分析绘图到轨道动画渲染的全自动流水线[cite: 3]。
+    \item \textbf{动力学建模与数值积分}：基于 \textbf{Python/SciPy} 实现了 Sun-Earth-Moon-Rocket 四体受力模型，采用 \textbf{Velocity-Verlet 辛积分器} 解决了高维非线性轨道演化的能量漂移问题，实现一年期演化能量相对漂移 $<10^{-6}$。
+    \item \textbf{发射窗口优化与借力解析}：构建了月球作用域（SOI）内的双曲线偏折坐标变换算法；设计内外层双重网格扫描与优化算法，在 2026 年 365 天窗口内成功搜索出最小总速度增量 $\Delta v_{\text{total}}$ 的最优发射日期与轨道参数。
+    \item \textbf{工程对接与可重现性}：接入 \textbf{JPL Horizons API} 获取真实天体状态向量，完成数值轨道的真实历表残差校验（位置残差 $\le 6000\text{ km}$）；编写 \textbf{Makefile} 实现了涵盖数据抓取、仿真计算、分析绘图到轨道动画渲染的全自动流水线。
 \end{itemize}
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
