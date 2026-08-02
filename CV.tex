@@ -132,14 +132,11 @@
 项目描述：基于钱学森《星际航行概论》拼接圆锥曲线理论，扩展并构建了结合月球引力弹弓效应与 JPL Horizons 真实历表数据的工程级行星际轨道优化与四体数值动力学仿真系统。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
     \item \textbf{动力学建模与数值积分}：基于 \textbf{Python/SciPy} 构建了四体受力模型，采用 Velocity-Verlet 辛积分器解决了高维非线性轨道演化的能量漂移问题。
-    \item \textbf{发射窗口优化、工程对接与可重现性}：设计内外层双重网格扫描与优化算法，在 2026 年 365 天窗口内成功搜索出最小总速度增量的最优发射日期与轨道参数；接入 \textbf{JPL Horizons API} 获取真实天体状态向量，完成数值轨道的真实历表残差校验；编写 \textbf{Makefile} 实现了涵盖数据抓取、仿真计算、分析绘图到轨道动画渲染的全自动流水线。
+    \item \textbf{发射窗口优化、工程对接与可重现性}：设计内外层双重网格扫描与优化算法，在 2026 年 365 天窗口内成功搜索出最小总速度增量的最优发射日期与轨道参数；接入 \textbf{JPL Horizons API} 获取真实天体状态向量，完成数值轨道的真实历表残差校验；编写 \textbf{Makefile} 实现数据抓取、仿真计算、分析绘图及轨道动画渲染。
 \end{itemize}
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
-\begin{itemize}[nosep]
-    \item \textbf{编程语言：} Python, R
-    \item \textbf{开发工具：} LaTex, Git等
-\end{itemize}
+    \textbf{编程语言：} Python, R \quad \textbf{开发工具：} LaTex, Git等
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faList}\ 获奖情况}
 \begin{itemize}
     \item 浙江大学2024-2025学年二等奖学金 \hfill 2025.10
