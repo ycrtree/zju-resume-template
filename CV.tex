@@ -90,12 +90,12 @@
 \pagenumbering{gobble}
 
 %%%% 利用tikz来定位照片
-%\begin{tikzpicture}[remember picture, overlay] 
- %   \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
-  %\end{tikzpicture}%
+\begin{tikzpicture}[remember picture, overlay] 
+     \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
+  \end{tikzpicture}%
   %%%% 利用tikz来定位学校Logo，这里只在第一页显示
   \begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
+    \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{cv_photo.png}};
   \end{tikzpicture}%
 \centerline{\LARGE\bfseries{叶储睿}} 
 
@@ -106,7 +106,7 @@
     
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
 \textbf{浙江大学} \hfill 2024.09 -- 至今\\[0.5em] % 标题和正文间加一点距离
-数学科学学院\quad 统计学\quad 大二\quad GPA 3.99/4.3
+数学科学学院\quad 统计学\quad 大二\quad GPA 3.87/4.00
 \begin{itemize}[nosep]
     \item 相关课程：《数学分析》、《高等代数与解析几何》、《概率论》、《数理统计》、《随机过程》、《统计学习》
 \end{itemize}
@@ -117,7 +117,7 @@
 % 将标题行末尾的 \\ 替换为 \titlebreak 命令
 
 \textbf{复杂统计模型假设检验的多层准蒙特卡洛（MLQMC）框架功效评估} \hfill 2025.09 -- 2026.02 \titlebreak
-项目描述：针对工业智能化中高维复杂模型假设检验的难题，项目旨在突破统计功效失真与计算效率低下的权衡瓶颈，提出了一种集高精度、高效率与强稳定性于一体的通用推断框架，相关成果以第一作者身份发表于 \textbf{Expert Systems with Applications}。
+项目描述：针对工业智能化中高维复杂模型假设检验的难题，项目旨在突破统计功效失真与计算效率低下的权衡瓶颈，提出了一种集高精度、高效率与强稳定性于一体的通用推断框架，相关成果以第一作者身份发表于 \textbf{《Expert Systems with Applications》}。
 % 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
     \item \textbf{理论与算法创新}：提出融合 \textbf{随机化 Sobol 序列}、\textbf{分层敏感性分配} 与 \textbf{Logistic 平滑} 的多层准蒙特卡洛评估框架，解决了序贯蒙特卡洛（SMC）在 $O(10^3)$ 高维参数空间中的粒子退化与方差失控问题。
